@@ -1,0 +1,104 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body{
+    background:  rgb(131, 105, 131);
+    color: white;
+    margin-bottom: 60px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#top{
+    width: 960px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 20px;
+}
+h1{
+    text-align: center;
+    padding-top:0px;
+    padding-bottom: 0px;
+    margin-bottom:20px;
+    line-height:10px;
+}
+h2{
+    text-align: center;
+}
+
+h4{
+    line-height: 10px;
+}
+#pic{
+    text-align: center;
+    
+}
+ul {
+    padding-top:0px;
+    line-height: 20px;
+} 
+   
+
+#play{
+   text-align: center;  
+}
+#meowButton{
+    padding-left: 100px;
+    padding-right: 100px;
+    border-radius: 20px;
+    padding: 20px;
+    font-size: 16pt;
+    color: white;
+    background-color: rgb(48, 38, 48);
+
+}
+#bottom{
+    width: 960px;
+    margin-right: auto;
+    margin-left: auto;
+    
+}
+#result{
+    width: 400px;
+    float: left;
+    border: white solid 3px;
+    height: 400px;
+    margin-bottom: 70px;
+}
+#gameplay{
+    width: 400px;
+    float: right;
+    border: rgb(159, 224, 37) solid 3px;
+    height: 400px;
+    margin-bottom: 20px;
+}
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color:rgb(48, 38, 48);
+    border-top: white solid 3px;
+}
+.container{
+    text-align: center;
+}
+.grid-container {
+    width: 960px;
+    display: grid;
+    grid-template-columns: auto auto;
+    height: 400px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 10px;
+  }
+  .grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    width: 400px;
+  }
+  

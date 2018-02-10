@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hangman Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css./style.css" />
+    <script src=".assets/javascript./game.js"></script>
+</head>
+
+<body>
+    <div id="top">
+        <h1>Welcome to Hangman-Cat Lovers Edition!</h1>
+        <h2>Word guessing Game</h2>
+        
+        <div id="pic">
+        <img src="https://media.giphy.com/media/10EsiPBJiivKaQ/giphy.gif" alt="kittens drinking">
+    </div>
+    <h4>Instructions:</h4>
+        <ul>
+            
+            <li>Each word will be the length of the number of lines on the screen.</li>
+            <li>To guess a letter, enter it on your keyboard.</li>
+            <li>If the letter you select is a letter in the word, the letter will
+            display on the screen in the correct location in the word. </li>
+            <li>If the letter is not contained in the word, then the
+            lines will remain on the screen and the counter will count down.</li>
+            <li>You will have 10 guesses per word.</li>
+            <li>When ready to play, click the Meow button</li>
+        </ul>
+        <div id="play">
+        <button id="meowButton">Meow</button>
+    </div>
+    </div>
+
+    
+    <div class="grid-container">
+            <div class="grid-item"></div>
+            <div class="grid-item"></div>
+    </div>
+        
+
+<footer class="footer">
+    <div class="container">
+        <p>Copyright &copy; 2018 Brenda Bassett</p>
+    </div>    
+</footer>
+
+</body>
+
+</html>
