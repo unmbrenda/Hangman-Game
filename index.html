@@ -8,46 +8,79 @@
     <title>Hangman Game</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="./assets/css./style.css" />
-    <script src=".assets/javascript./game.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
     <div id="top">
         <h1>Welcome to Hangman-Cat Lovers Edition!</h1>
         <h2>Word guessing Game</h2>
-        
-        <div id="pic">
-        <img src="https://media.giphy.com/media/10EsiPBJiivKaQ/giphy.gif" alt="kittens drinking">
     </div>
-    <h4>Instructions:</h4>
+    <div id="instructions">
+        <div id="pic">
+            <img src="https://media.giphy.com/media/10EsiPBJiivKaQ/giphy.gif" alt="kittens drinking">
+        </div>
+        <h4>Instructions:</h4>
         <ul>
-            
+
             <li>Each word will be the length of the number of lines on the screen.</li>
             <li>To guess a letter, enter it on your keyboard.</li>
-            <li>If the letter you select is a letter in the word, the letter will
-            display on the screen in the correct location in the word. </li>
-            <li>If the letter is not contained in the word, then the
-            lines will remain on the screen and the counter will count down.</li>
+            <li>If the letter you select is a letter in the word, the letter will display on the screen in the correct location
+                in the word. </li>
+            <li>If the letter is not contained in the word, then the lines will remain on the screen and the counter will count
+                down.
+            </li>
             <li>You will have 10 guesses per word.</li>
             <li>When ready to play, click the Meow button</li>
         </ul>
         <div id="play">
-        <button id="meowButton">Meow</button>
-    </div>
+            <button id="meowButton" onClick="meowClick()" onmouseover="this.style.color='teal'" onmouseleave="this.style.color='white'">Meow</button>
+        </div>
     </div>
 
-    
-    <div class="grid-container">
-            <div class="grid-item"></div>
-            <div class="grid-item"></div>
-    </div>
-        
 
-<footer class="footer">
-    <div class="container">
-        <p>Copyright &copy; 2018 Brenda Bassett</p>
-    </div>    
-</footer>
+    <div class="grid-container hidden" id="gameGrid">
+        <div class="grid-item">
+            <div id="stats">
+                <h3 id="guessed">Letters Guessed:</h3>
+                <h3 id="remaining">Lives Remaining:</h3>
+            </div>
+            <div id="maine-coon-pic" class="hidden">
+                <img class="picture" src="./assets/images/maineCoon.jpg">
+            </div>
+        </div>
+        <div class="grid-item" id="currentWord">
+            <div id="maine-coon">
+                <div class="letter" id="w0-l0"></div>
+                <div class="letter" id="w0-l1"></div>
+                <div class="letter" id="w0-l2"></div>
+                <div class="letter" id="w0-l3"></div>
+                <div class="letter" id="w0-l4"></div>
+                <div class="letter" id="w0-l5">-</div>
+                <div class="letter" id="w0-l6"></div>
+                <div class="letter" id="w0-l7"></div>
+                <div class="letter" id="w0-l8"></div>
+                <div class="letter" id="w0-l9"></div>
+            </div>
+            <div id="whiskers" class="hidden">
+                <div class="letter" id="w1-l0"></div>
+                <div class="letter" id="w1-l1"></div>
+                <div class="letter" id="w1-l2"></div>
+                <div class="letter" id="w1-l3"></div>
+                <div class="letter" id="w1-l4"></div>
+                <div class="letter" id="w1-l5">-</div>
+                <div class="letter" id="w1-l6"></div>
+                <div class="letter" id="w1-l7"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Copyright &copy; 2018 Brenda Bassett</p>
+        </div>
+    </footer>
+    <script src="./assets/javascript/game.js"></script>
 
 </body>
 
