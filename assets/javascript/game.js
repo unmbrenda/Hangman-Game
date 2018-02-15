@@ -4,41 +4,7 @@ function meowClick() {
 
     var gameGrid = document.getElementById("gameGrid");
     gameGrid.classList.remove("hidden");
-
 }
-
-// var hangman = {
-//     imagePath: "./assets/images",
-//     currentWordIndex: 0,
-//     words: [
-//         { word: "whiskers", img: "./whiskers.jpg" },
-//         { word: "siamese", img: "siamese.jpg" },
-//         { word: "maine coon", img: "maineCoon.jpg" },
-//         { word: "scratch", img: "scratch.jpg" },
-//         { word: "ragdoll", img: "ragdoll.jpg" },
-//         { word: "burmese", img: "burmese.jpg" }
-//     ],
-//     inProgress: false,
-
-// currentWord: function() {
-//     return this.words[this.currentWordIndex].word;
-// },
-// currentWordPath: function () {
-//     return this.imagePath + "/" + this.words[this.currentWordIndex].img;
-// },
-// nextWord: function () {
-//     if (this.currentWordIndex < this.words.length) {
-//         this.currentWordIndex++;
-//     }
-// }
-
-// }
-
-// console.log(hangman.currentWordPath());
-// hangman.nextWord();
-// console.log(hangman.currentWordPath());
-
-//  console.log(hangman.currentWord());
 
 function isAlphaNum(char) {
     if (char.length > 1) {
@@ -61,24 +27,34 @@ function isAlphaNum(char) {
 var lives = 10
 var myWord = "maine-coon"
 document.onkeyup = function (event) {
-    var letter = event.key.toLowerCase();
-    if (isAlphaNum(letter)) {
-        var n = myWord.indexOf(letter);
-        if (n >= 0) {
-            // happy path
-            for (var i = 0; i < myWord.length; i++) {
-                if (myWord.charAt(i) === letter) {
-                    document.getElementById("w0-l" + i).innerHTML = letter;
-                    if (isWordGuessed(myWord)=== true){
+    var letter = event.key.toLowerCase(); //gives letter pushed, convert to lower case, assign result to var letter
+    if (isAlphaNum(letter)) { //checks to see if alphanumeric using previous function above, will only execute what is in the curlies if the expression in the parentheses is true
+        var n = myWord.indexOf(letter);//looks to see if letter pressed is in word
+        if (n >= 0) {//if not in word returns -1, finds index of letter in word
+            // happy path: only if n >=0 will these lines be executed
+            for (var i = 0; i < myWord.length; i++) {//sets # of times to loop and ++ means loop again if condition not met
+                if (myWord.charAt(i) === letter) {//if letter typed is letter in word
+                    document.getElementById("w0-l" + i).innerHTML = letter;//if letter chosen is in word, it will display
+                    if (isWordGuessed(myWord)=== true){//if returns value of true, then show pic
                         showPic();
                     }
+                    
                 }
                 
             }
         }
         else {
             // sad path
-            lives--;
+            
+            var failedGuesses = document.getElementById("guessed").innerHTML;
+            
+            if (failedGuesses.indexOf(letter) === -1) {
+                document.getElementById("guessed").innerHTML = failedGuesses + letter;    
+                lives--;  
+            document.getElementById("remaining").innerHTML = lives;
+                 
+            }
+            
             if (lives <= 0) {
                 // picture
                 showPic();
