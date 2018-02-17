@@ -132,3 +132,7 @@ ul {
    height: 200px;
    margin-top: 90px;
   }
+  #gameOver{
+      margin-top: 200px;
+      font-size: 60px;
+  }

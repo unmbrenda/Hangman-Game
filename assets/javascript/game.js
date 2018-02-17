@@ -26,12 +26,13 @@ function isAlphaNum(char) {
 
 var lives = 10;
 var myWord = "maine-coon";
-var wordList = ["maine-coon", "whiskers", "burmese"];
+var wordList = ["maine-coon", "whiskers", "burmese", "ragdoll"];
 
 document.onkeyup = function (event) {
     if (isWordGuessed(myWord) || lives <= 0) {
         var wordIndex = wordList.indexOf(myWord);
-        if (wordIndex < wordList.length) {
+      
+        if (wordIndex < wordList.length -1) {
             lives = 10;
             hidePic(myWord);
             hideWord(myWord);
@@ -41,7 +42,11 @@ document.onkeyup = function (event) {
             document.getElementById("remaining").innerHTML = lives;
             
         }
+        else {
+            document.getElementById("gameOver").classList.remove("hidden");
+        }
     }
+    
     else {
 
         var letter = event.key.toLowerCase(); //gives letter pushed, convert to lower case, assign result to var letter

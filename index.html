@@ -8,7 +8,7 @@
     <title>Hangman Game</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css" />
-   
+
 </head>
 
 <body>
@@ -42,19 +42,27 @@
     <div class="grid-container hidden" id="gameGrid">
         <div class="grid-item">
             <div id="stats">
-                <h3>Letters Guessed: <div id="guessed"></div></h3>
-                <h3>Lives Remaining: <div id="remaining"></div></h3>
+                <h3>Letters Guessed:
+                    <div id="guessed"></div>
+                </h3>
+                <h3>Lives Remaining:
+                    <div id="remaining"></div>
+                </h3>
             </div>
             <div id="maine-coon-pic" class="hidden">
                 <img class="picture" src="./assets/images/maineCoon.jpg">
                 <div>Push any key to start again</div>
-            </div>    
+            </div>
             <div id="whiskers-pic" class="hidden">
                 <img class="picture" src="./assets/images/whiskers.jpg">
                 <div>Push any key to start again</div>
             </div>
             <div id="burmese-pic" class="hidden">
                 <img class="picture" src="./assets/images/burmese.jpg">
+                <div>Push any key to start again</div>
+            </div>
+            <div id="ragdoll-pic" class="hidden">
+                <img class="picture" src="./assets/images/ragdoll.jpg">
                 <div>Push any key to start again</div>
             </div>
         </div>
@@ -90,6 +98,18 @@
                 <div class="letter" id="w2-l5"></div>
                 <div class="letter" id="w2-l6"></div>
             </div>
+            <div id="ragdoll" class="hidden">
+                <div class="letter" id="w3-l0"></div>
+                <div class="letter" id="w3-l1"></div>
+                <div class="letter" id="w3-l2"></div>
+                <div class="letter" id="w3-l3"></div>
+                <div class="letter" id="w3-l4"></div>
+                <div class="letter" id="w3-l5"></div>
+                <div class="letter" id="w3-l6"></div>
+            </div>
+            <div id="gameOver" class="hidden">
+                    Game Over
+                </div>
         </div>
     </div>
 
